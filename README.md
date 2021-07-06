@@ -6,4 +6,4 @@
 - CSS
 - JAVA SCRIPT
 
-### It is an experiment project to learn git
+### It is an experiment project to learn git.

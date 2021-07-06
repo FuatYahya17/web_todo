@@ -5,7 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Input for new todo -->
+      <div class="flex flex-cl add-flex">
+        <textarea
+          id="todo-text"
+          class="textarea"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button id="btn-add-id" class="btn-add" onclick="add_todo()">
+          Add
+        </button>
+      </div>
+      <!-- todo list display -->
+      <div id="notes" class="flex flex-cl todo-flex">
+        <div class="note">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Repudiandae reiciendis dolorem veritatis nulla eveniet error
+            accusamus magni commodi officiis, illum minima ullam animi natus
+            assumenda, consequatur quibusdam aliquid accusantium obcaecati.
+          </p>
+          <button class="btn remark">Done</button>
+        </div>
+
+        <div class="note">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            mollitia temporibus laboriosam maiores amet? Commodi velit dolore
+            architecto repudiandae.
+          </p>
+          <button class="btn remark">Done</button>
+        </div>
+        <div class="note">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            mollitia temporibus laboriosam maiores amet? Commodi velit dolore
+            architecto repudiandae, quis vitae nulla cupiditate dolor officia
+            molestiae distinctio quos dolores accusamus!
+          </p>
+          <button class="btn remark">Done</button>
+        </div>
+        <div class="note">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            mollitia temporibus laboriosam maiores amet?
+          </p>
+          <button class="btn remark">Done</button>
+        </div>
+        <div class="note">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="btn remark">Done</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
-l

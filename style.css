@@ -1,0 +1,76 @@
+body {
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    to bottom,
+    rgb(132, 188, 233),
+    rgba(132, 188, 233, 0.6)
+  );
+}
+
+.textarea {
+  border-radius: 10px;
+  border: 0px;
+  padding: 10px;
+}
+
+#todo_text {
+  margin-left: 10%;
+  width: 80%;
+}
+
+.btn-add {
+  background-color: steelblue;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-size: x-large;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 40%;
+  font-weight: normal;
+  font-family: "Arial", sans-serif;
+  display: block;
+}
+
+.btn-add:hover {
+  background-color: rgb(46, 95, 135);
+}
+
+.felx {
+  display: flex;
+}
+
+.flex-cl {
+  flex-direction: column;
+}
+
+.todo-flex {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  width: 80%;
+  height: 50vh;
+  margin-left: 10%;
+  margin-top: 20px;
+  justify-content: space-around;
+  display: block;
+  overflow: scroll;
+}
+
+.todo-flex > .note {
+  margin-bottom: 20px;
+  background-color: rgb(214, 214, 214);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.note > p {
+  font-size: small;
+}
+
+.remark {
+  background-color: rgb(59, 179, 59);
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  color: white;
+}
