@@ -7,15 +7,16 @@ body {
   );
 }
 
+.add-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .textarea {
   border-radius: 10px;
   border: 0px;
   padding: 10px;
-}
-
-#todo_text {
-  margin-left: 10%;
-  width: 80%;
 }
 
 .btn-add {
@@ -26,25 +27,15 @@ body {
   font-size: x-large;
   padding: 10px;
   margin-top: 20px;
-  margin-left: 40%;
   font-weight: normal;
   font-family: "Arial", sans-serif;
-  display: block;
 }
 
 .btn-add:hover {
   background-color: rgb(46, 95, 135);
 }
 
-.felx {
-  display: flex;
-}
-
-.flex-cl {
-  flex-direction: column;
-}
-
-.todo-flex {
+.notes-flex {
   background-color: white;
   border-radius: 5px;
   padding: 15px;
@@ -57,7 +48,7 @@ body {
   overflow: scroll;
 }
 
-.todo-flex > .note {
+.notes-flex > .note {
   margin-bottom: 20px;
   background-color: rgb(214, 214, 214);
   padding: 10px;
