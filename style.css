@@ -22,8 +22,18 @@ header {
   justify-content: center;
   background: white;
   margin: 0;
+  animation: fade-in 1s ease-in 1;
 }
 
+@keyframes fade-in {
+  from {
+    color: white;
+  }
+
+  to {
+    color: black;
+  }
+}
 main {
   grid-area: main;
   padding: 10px 20px;
