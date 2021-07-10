@@ -3,7 +3,7 @@
 function add_todo() {
   // get note from textarea element
   let note = document.getElementById("todo-text").value;
-  if (true) {
+  if (note != "") {
     // get bunch of notes from the notes
     let notes = document.getElementById("notes").innerHTML;
 
@@ -11,9 +11,9 @@ function add_todo() {
     new_notes =
       notes +
       `<div class="note">
-        <p>` +
+        <div class="note-text">` +
       note +
-      `</p>
+      `</div>
         <button class="btn remark">Done</button>
       </div>`;
 
@@ -26,4 +26,4 @@ function add_todo() {
 }
 
 // TODO
-// When button done is pressed remove the item from the notes list
+// When button done is pressed remove the item from the notes

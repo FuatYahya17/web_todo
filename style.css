@@ -1,62 +1,121 @@
 body {
   margin: 0;
+  padding: 0;
   background-repeat: no-repeat;
   background: linear-gradient(
-    to bottom,
-    rgba(132, 188, 233, 0.6),
+    125deg,
+    rgba(132, 188, 233, 0.4),
     rgb(132, 188, 233)
   );
-  display: grid;
-  grid-template-rows: 60px auto 60px;
-  grid-template-columns: 0% auto;
-  grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
-  grid-area: header;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   background: white;
   margin: 0;
-  animation: fade-in 1s ease-in 1;
+  padding-bottom: 10px;
+  position: relative;
 }
 
-@keyframes fade-in {
+header .title {
+  color: black;
+  font-family: "Yomogi", cursive;
+}
+
+.slider-box {
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  animation: header-slide 1s linear 1 forwards;
+}
+
+header .slider-box {
+  background: white;
+}
+
+@keyframes header-slide {
   from {
-    color: white;
+    transform: translate(0px);
   }
 
   to {
-    color: black;
+    transform: translate(150px);
+    visibility: hidden;
   }
 }
+
 main {
-  grid-area: main;
-  padding: 10px 20px;
+  position: relative;
 }
 
-aside {
-  grid-area: aside;
+.box {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(132, 188, 233);
+  position: absolute;
+  z-index: 1;
+  animation: main-fade-in 1s ease-in 1;
+  animation-fill-mode: forwards;
 }
+
+@keyframes main-fade-in {
+  from {
+    background: rgb(132, 188, 233);
+  }
+
+  to {
+    background: rgba(132, 188, 233, 0);
+    visibility: hidden;
+  }
+}
+
+/* aside {
+  grid-area: aside;
+} */
 
 footer {
-  grid-area: footer;
+  /* margin-top: 20px; */
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: rgb(22, 22, 22);
-  color: orangered;
+  color: rgb(255, 111, 0);
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+footer .slider-box {
+  background: rgb(22, 22, 22);
+  height: 100%;
+}
+
+@keyframes header-slide {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translate(150px);
+    visibility: hidden;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   margin: 20px 20%;
-  padding: 0;
 }
 
 .textarea {
@@ -64,8 +123,6 @@ footer {
   border-radius: 10px;
   border: 0px;
   padding: 10px;
-
-  margin: 0;
 }
 
 .btn-container {
@@ -78,16 +135,22 @@ footer {
   background-color: rgb(68, 149, 216);
   color: white;
   width: 70px;
+  border: 0px;
   border-radius: 5px;
   font-size: large;
   padding: 5px;
   margin-top: 20px;
   font-family: "Arial", sans-serif;
   font-weight: 900;
+  box-shadow: 2px 3px #999;
 }
 
 .btn-add:hover {
-  background-color: rgb(46, 95, 135);
+  background-color: rgb(63, 126, 177);
+}
+
+.btn-add:active {
+  transform: translate(2px, 3px);
 }
 
 .notes-flex {
@@ -96,21 +159,25 @@ footer {
   padding: 15px;
   width: 100%;
   height: 50vh;
-  margin: 20px 0 0 0;
-  justify-content: space-around;
+  margin-top: 20px;
   display: block;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .notes-flex > .note {
+  width: 95%;
   margin-bottom: 20px;
   background-color: rgb(214, 214, 214);
   padding: 10px;
   border-radius: 5px;
 }
 
-.note > p {
+.note > .note-text {
+  width: 100%;
+  font-family: "Yomogi", cursive;
   font-size: small;
+  overflow-wrap: break-word;
 }
 
 .remark {
@@ -118,8 +185,16 @@ footer {
   border-radius: 5px;
   padding: 2px 5px 2px 5px;
   color: white;
+  margin-top: 10px;
+  border: 0px;
+
+  box-shadow: 1px 2px #999;
 }
 
-button.remark:hover {
+.remark:hover {
   background-color: red;
+}
+
+.remark:active {
+  transform: translate(1px, 2px);
 }
