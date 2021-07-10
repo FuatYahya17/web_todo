@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <header>
+      <h2>Header</h2>
+    </header>
+    <main class="container">
       <!-- Input for new todo -->
-      <div class="flex flex-cl add-flex">
+      <div class="add-flex">
         <textarea
           id="todo-text"
           class="textarea"
           cols="30"
           rows="10"
+          placeholder="add a note..."
         ></textarea>
+      </div>
+      <div class="btn-container">
         <button id="btn-add-id" class="btn-add" onclick="add_todo()">
           Add
         </button>
@@ -41,32 +47,14 @@
           </p>
           <button class="btn remark">Done</button>
         </div>
-        <div class="note">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            mollitia temporibus laboriosam maiores amet? Commodi velit dolore
-            architecto repudiandae, quis vitae nulla cupiditate dolor officia
-            molestiae distinctio quos dolores accusamus!
-          </p>
-          <button class="btn remark">Done</button>
-        </div>
-        <div class="note">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            mollitia temporibus laboriosam maiores amet?
-          </p>
-          <button class="btn remark">Done</button>
-        </div>
-        <div class="note">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button class="btn remark">Done</button>
-        </div>
-        <div class="note">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button class="btn remark">Done</button>
-        </div>
       </div>
-    </div>
+    </main>
+    <!-- <aside>
+      <h2>Sidebar</h2>
+    </aside> -->
+    <footer>
+      <h2>Footer</h2>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
