@@ -53,6 +53,17 @@ header .slider-box {
 
 main {
   position: relative;
+  animation: grow 1s ease-in 1 forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
 }
 
 .box {
