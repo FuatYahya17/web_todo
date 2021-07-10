@@ -4,48 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap"
+      rel="stylesheet"
+    />
     <title>Todo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h2>To Do List</h2>
+      <h2 class="title">To Do List</h2>
+      <div class="slider-box"></div>
     </header>
-    <main class="container">
+    <main>
       <!-- Input for new todo -->
-      <div class="add-flex">
-        <textarea
-          id="todo-text"
-          class="textarea"
-          cols="30"
-          rows="10"
-          placeholder="add a note..."
-        ></textarea>
-      </div>
-      <div class="btn-container">
-        <button id="btn-add-id" class="btn-add" onclick="add_todo()">
-          Add
-        </button>
-      </div>
-      <!-- todo list display -->
-      <div id="notes" class="notes-flex">
-        <div class="note">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Repudiandae reiciendis dolorem veritatis nulla eveniet error
-            accusamus magni commodi officiis, illum minima ullam animi natus
-            assumenda, consequatur quibusdam aliquid accusantium obcaecati.
-          </p>
-          <button class="btn remark">Done</button>
+      <div class="box"></div>
+      <div class="container">
+        <div class="add-flex">
+          <textarea
+            id="todo-text"
+            class="textarea"
+            cols="30"
+            rows="10"
+            placeholder="add a note..."
+          ></textarea>
         </div>
+        <div class="btn-container">
+          <button id="btn-add-id" class="btn-add" onclick="add_todo()">
+            Add
+          </button>
+        </div>
+        <!-- todo list display -->
+        <div id="notes" class="notes-flex">
+          <div class="note">
+            <div class="note-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repudiandae reiciendis dolorem veritatis nulla eveniet error
+              accusamus magni commodi officiis, illum minima ullam animi natus
+              assumenda, consequatur quibusdam aliquid accusantium obcaecati.
+            </div>
+            <button class="btn remark">Done</button>
+          </div>
 
-        <div class="note">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            mollitia temporibus laboriosam maiores amet? Commodi velit dolore
-            architecto repudiandae.
-          </p>
-          <button class="btn remark">Done</button>
+          <div class="note">
+            <div class="note-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              mollitia temporibus laboriosam maiores amet? Commodi velit dolore
+              architecto repudiandae.
+            </div>
+            <button class="btn remark">Done</button>
+          </div>
         </div>
       </div>
     </main>
@@ -54,7 +62,9 @@
     </aside> -->
     <footer>
       <h2>Footer</h2>
+      <div class="slider-box"></div>
     </footer>
+
     <script src="main.js"></script>
   </body>
 </html>

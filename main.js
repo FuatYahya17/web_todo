@@ -3,7 +3,7 @@
 function add_todo() {
   // get note from textarea element
   let note = document.getElementById("todo-text").value;
-  if (true) {
+  if (note != "") {
     // get bunch of notes from the notes
     let notes = document.getElementById("notes").innerHTML;
 
@@ -17,14 +17,15 @@ function add_todo() {
     
     
     // add the new note to the previous notes
-//     new_notes =
-//       notes +
-//       `<div class="note">
-//         <p>` +
-//       note +
-//       `</p>
-//         <button class="btn remark">Done</button>
-//       </div>`;
+
+    new_notes =
+      notes +
+      `<div class="note">
+        <div class="note-text">` +
+      note +
+      `</div>
+        <button class="btn remark">Done</button>
+      </div>`;
 
     // Update notes
 //     document.getElementById("notes").innerHTML = new_notes;
@@ -37,4 +38,4 @@ function add_todo() {
 }
 
 // TODO
-// When button done is pressed remove the item from the notes list
+// When button done is pressed remove the item from the notes
